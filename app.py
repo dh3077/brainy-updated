@@ -363,6 +363,8 @@ def save_model():
             'n_params':         info.get('n_params'),
         },
         'weights_file': weights_sub,
+        'reflections': data.get('reflections') or {},
+        'learning_notes': data.get('learning_notes') or {},
     }
     if state['mode'] == 'classifier':
         meta['labels'] = info.get('labels', [])
